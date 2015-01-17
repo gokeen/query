@@ -1,4 +1,4 @@
-package query
+package interval
 
 import (
 	"fmt"
@@ -29,11 +29,11 @@ type Reference interface {
 type reference string
 
 var (
-	Every Reference = NewReference("every")
+	Every Reference = New("every")
 )
 
 // New returns a new interval reference
-func NewReference(s string) reference {
+func New(s string) reference {
 	return reference(s)
 }
 

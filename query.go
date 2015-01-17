@@ -1,5 +1,9 @@
 package query
 
+import (
+	. "gopkg.in/gokeen/query.v1/interval"
+)
+
 type queryOpts func(*Query)
 
 // Query is the struct around the properties of keen.io's query resources

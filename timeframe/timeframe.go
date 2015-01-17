@@ -1,6 +1,7 @@
-package query
+package timeframe
 
 import (
+	"gopkg.in/gokeen/query.v1/interval"
 	"net/url"
 	"time"
 )
@@ -15,8 +16,8 @@ const (
 )
 
 var (
-	This     Reference = NewReference("this")
-	Previous Reference = NewReference("previous")
+	This     interval.Reference = interval.New("this")
+	Previous interval.Reference = interval.New("previous")
 )
 
 type absolute struct {

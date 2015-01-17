@@ -1,4 +1,4 @@
-package query
+package interval
 
 import (
 	"gopkg.in/nowk/assert.v2"
@@ -26,7 +26,7 @@ func TestInterval(t *testing.T) {
 }
 
 func TestZeroReturnsSingular(t *testing.T) {
-	every := NewReference("every")
+	every := New("every")
 	assert.Equal(t, Interval("every_month"), every.when("month", 0))
 }
 
