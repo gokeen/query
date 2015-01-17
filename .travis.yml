@@ -1,5 +1,7 @@
 language: go
 install:
+  - go get gopkg.in/gokeen/query.v1/timeframe
+  - go get gopkg.in/gokeen/query.v1/interval
   - go get gopkg.in/nowk/assert.v2
 go:
   # - "1.0"
