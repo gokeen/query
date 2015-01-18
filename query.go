@@ -22,16 +22,14 @@ type Query struct {
 	PropertyNames []string `json:"property_names,omitempty"`
 
 	queryType string
-	projectID string
 }
 
-func new(pid, qtype, coll, targ string, opts ...queryOpts) *Query {
+func new(qtype, coll, targ string, opts ...queryOpts) *Query {
 	q := &Query{
 		EventCollection: coll,
 		TargetProperty:  targ,
 
 		queryType: qtype,
-		projectID: pid,
 	}
 
 	for _, v := range opts {
@@ -43,8 +41,4 @@ func new(pid, qtype, coll, targ string, opts ...queryOpts) *Query {
 
 func (q Query) QueryType() string {
 	return q.queryType
-}
-
-func (q Query) ProjectID() string {
-	return q.projectID
 }
