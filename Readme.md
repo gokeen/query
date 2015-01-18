@@ -18,11 +18,11 @@ __gopkg.in__
 
 ## Example
 
-    k := keen.NewClient(func(c *api.Client) {
+    k := keen.NewClient("aprojectid", func(c *api.Client) {
       c.ReadKey = "areadkey"
     })
 
-    qry := query.CountUnique("aprojectid", "awesome-events", "some.property", func(q *query.Query) {
+    qry := query.CountUnique("awesome-events", "some.property", func(q *query.Query) {
       q.Timeframe = timeframe.Previous.Hour(2)
     })
 
@@ -38,61 +38,61 @@ __gopkg.in__
 
 https://keen.io/docs/api/reference/#count-resource
 
-    func Count(projectID, eventCollection string, opts ...queryOpts) Resource
+    func Count(eventCollection string, opts ...queryOpts) Resource
 
 ### CountUnique resource
 
 https://keen.io/docs/api/reference/#count-unique-resource
 
-    func CountUnique(projectID, eventCollection, propertyTarget string, opts ...queryOpts) Resource
+    func CountUnique(eventCollection, propertyTarget string, opts ...queryOpts) Resource
 
 ### Minimum resource
 
 https://keen.io/docs/api/reference/#minimum-resource
 
-    func Minimum(projectID, eventCollection, propertyTarget string, opts ...queryOpts) Resource
+    func Minimum(eventCollection, propertyTarget string, opts ...queryOpts) Resource
 
 ### Maximum resource
 
 https://keen.io/docs/api/reference/#maximum-resource
 
-    func Maximum(projectID, eventCollection, propertyTarget string, opts ...queryOpts) Resource
+    func Maximum(eventCollection, propertyTarget string, opts ...queryOpts) Resource
 
 ### Average resource
 
 https://keen.io/docs/api/reference/#average-resource
 
-    func Average(projectID, eventCollection, propertyTarget string, opts ...queryOpts) Resource
+    func Average(eventCollection, propertyTarget string, opts ...queryOpts) Resource
 
 ### Median resource
 
 https://keen.io/docs/api/reference/#median-resource
 
-    func Median(projectID, eventCollection, propertyTarget string, opts ...queryOpts) Resource
+    func Median(eventCollection, propertyTarget string, opts ...queryOpts) Resource
 
 ### Percentile resource
 
 https://keen.io/docs/api/reference/#percentile-resource
 
-    func Percentile(projectID, eventCollection, propertyTarget string, percent float64, opts ...queryOpts) Resource
+    func Percentile(eventCollection, propertyTarget string, percent float64, opts ...queryOpts) Resource
 
 ### Sum resource
 
 https://keen.io/docs/api/reference/#sum-resource
 
-    func Sum(projectID, eventCollection, propertyTarget string, opts ...queryOpts) Resource
+    func Sum(eventCollection, propertyTarget string, opts ...queryOpts) Resource
 
 ### SelectUnique resource
 
 https://keen.io/docs/api/reference/#select-unique-resource
 
-    func SelectUnique(projectID, eventCollection, propertyTarget string, opts ...queryOpts) Resource
+    func SelectUnique(eventCollection, propertyTarget string, opts ...queryOpts) Resource
 
 ### Extraction resource
 
 https://keen.io/docs/api/reference/#extraction-resource
 
-    func Extraction(projectID, eventCollection string, opts ...queryOpts) Resource
+    func Extraction(eventCollection string, opts ...queryOpts) Resource
 
 ## License
 
